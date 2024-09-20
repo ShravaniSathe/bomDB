@@ -1,0 +1,40 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column Grade in table [dbo].[ItemMasterSales] is currently  VARCHAR (100) NULL but is being changed to 
+         VARCHAR (50) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with
+         type  VARCHAR (50) NULL.
+       The type for column ItemCode in table [dbo].[ItemMasterSales] is currently  VARCHAR (100) NOT NULL but is being changed
+         to  VARCHAR (50) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible
+         with type  VARCHAR (50) NULL.
+       The type for column ItemName in table [dbo].[ItemMasterSales] is currently  VARCHAR (255) NOT NULL but is being changed
+         to  VARCHAR (100) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible
+         with type  VARCHAR (100) NULL.
+       The type for column UOM in table [dbo].[ItemMasterSales] is currently  VARCHAR (50) NULL but is being changed to 
+         VARCHAR (10) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with
+         type  VARCHAR (10) NULL.
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[ItemMasterRawMaterial] (Check Constraint)
+       unnamed constraint on [dbo].[ItemMasterSales] (Check Constraint)
+       unnamed constraint on [dbo].[ItemRawMaterialMapping] (Check Constraint)
+     Alter
+       [dbo].[ItemMasterSales] (Table)
+     Create
+       Check Constraint: unnamed constraint on [dbo].[ItemMasterRawMaterial] (Check Constraint)
+       Check Constraint: unnamed constraint on [dbo].[ItemMasterSales] (Check Constraint)
+       Check Constraint: unnamed constraint on [dbo].[ItemRawMaterialMapping] (Check Constraint)
+
+** Supporting actions
+
+The type for column Grade in table [dbo].[ItemMasterSales] is currently  VARCHAR (100) NULL but is being changed to  VARCHAR (50) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  VARCHAR (50) NULL.
+The type for column ItemCode in table [dbo].[ItemMasterSales] is currently  VARCHAR (100) NOT NULL but is being changed to  VARCHAR (50) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  VARCHAR (50) NULL.
+The type for column ItemName in table [dbo].[ItemMasterSales] is currently  VARCHAR (255) NOT NULL but is being changed to  VARCHAR (100) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  VARCHAR (100) NULL.
+The type for column UOM in table [dbo].[ItemMasterSales] is currently  VARCHAR (50) NULL but is being changed to  VARCHAR (10) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  VARCHAR (10) NULL.
+
