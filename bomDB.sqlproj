@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>bomDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{63a42b24-3a1b-481f-a5e2-6fdba56fbbfe}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>bomDB</RootNamespace>
+    <AssemblyName>bomDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\StoredProcedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ItemMasterSales.sql" />
+    <Build Include="dbo\Tables\ItemMasterRawMaterial.sql" />
+    <Build Include="dbo\Tables\SubAssemblies.sql" />
+    <Build Include="dbo\Tables\BoughtOutItems.sql" />
+    <Build Include="dbo\Tables\BOMStructures.sql" />
+    <Build Include="dbo\Tables\ItemRawMaterialMapping.sql" />
+    <Build Include="dbo\Tables\RawMaterialBoughtOutMapping.sql" />
+    <Build Include="dbo\Tables\BOMTrees.sql" />
+    <Build Include="dbo\Tables\BOMTreeNodes.sql" />
+    <Build Include="dbo\Tables\BoughtOutItemMapping.sql" />
+    <Build Include="dbo\Tables\SubAssemblyMapping.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteBOMStructureById.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteBoughtOutItemById.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteBoughtOutItemMappingById.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteItemMasterRawMaterialById.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteItemMasterSalesById.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteItemRawMaterialMappingById.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteRawMaterialBoughtOutMappingById.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteSubAssemblyById.sql" />
+    <Build Include="dbo\StoredProcedures\DeleteSubAssemblyMappingById.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllBOMStructures.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllBoughtOutItemMappings.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllBoughtOutItems.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllItemMasterRawMaterials.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllItemMasterSales.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllItemRawMaterialMappings.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllRawMaterialBoughtOutMappings.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllSubAssemblies.sql" />
+    <Build Include="dbo\StoredProcedures\GetAllSubAssemblyMappings.sql" />
+    <Build Include="dbo\StoredProcedures\GetBOMStructureById.sql" />
+    <Build Include="dbo\StoredProcedures\GetBoughtOutItemById.sql" />
+    <Build Include="dbo\StoredProcedures\GetBoughtOutItemMappingById.sql" />
+    <Build Include="dbo\StoredProcedures\GetItemMasterRawMaterialById.sql" />
+    <Build Include="dbo\StoredProcedures\GetItemMasterSaleById.sql" />
+    <Build Include="dbo\StoredProcedures\GetItemRawMaterialMappingById.sql" />
+    <Build Include="dbo\StoredProcedures\GetRawMaterialBoughtOutMappingById.sql" />
+    <Build Include="dbo\StoredProcedures\GetSubAssemblyById.sql" />
+    <Build Include="dbo\StoredProcedures\GetSubAssemblyMappingById.sql" />
+    <Build Include="dbo\StoredProcedures\sp_DeleteBOMTree.sql" />
+    <Build Include="dbo\StoredProcedures\sp_GetBOMTreeById.sql" />
+    <Build Include="dbo\StoredProcedures\sp_InsertBOMTree.sql" />
+    <Build Include="dbo\StoredProcedures\sp_InsertBOMTreeNode.sql" />
+    <Build Include="dbo\StoredProcedures\sp_SearchBoughtOutItems.sql" />
+    <Build Include="dbo\StoredProcedures\sp_SearchItemMasterSales.sql" />
+    <Build Include="dbo\StoredProcedures\sp_SearchProductRawMaterials.sql" />
+    <Build Include="dbo\StoredProcedures\sp_SearchSubAssemblies.sql" />
+    <Build Include="dbo\StoredProcedures\sp_UpdateBOMTree.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateBOMStructure.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateBoughtOutItem.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateBoughtOutItemMapping.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateItemMasterRawMaterial.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateItemMasterSales.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateItemRawMaterialMapping.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateRawMaterialBoughtOutMapping.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateSubAssembly.sql" />
+    <Build Include="dbo\StoredProcedures\UpdateSubAssemblyMapping.sql" />
+  </ItemGroup>
+</Project>
