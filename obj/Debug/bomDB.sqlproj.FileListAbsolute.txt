@@ -1,0 +1,6 @@
+C:\Users\Sai\source\repos\bomDB\bin\Debug\bomDB.dacpac
+C:\Users\Sai\source\repos\bomDB\bin\Debug\bomDB.dll
+C:\Users\Sai\source\repos\bomDB\bin\Debug\bomDB.pdb
+C:\Users\Sai\source\repos\bomDB\obj\Debug\bomDB.sqlproj.AssemblyReference.cache
+C:\Users\Sai\source\repos\bomDB\obj\Debug\bomDB.dll
+C:\Users\Sai\source\repos\bomDB\obj\Debug\bomDB.pdb
