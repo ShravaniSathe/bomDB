@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "bomDB", "bomDB.sqlproj", "{63A42B24-3A1B-481F-A5E2-6FDBA56FBBFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63A42B24-3A1B-481F-A5E2-6FDBA56FBBFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A42B24-3A1B-481F-A5E2-6FDBA56FBBFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A42B24-3A1B-481F-A5E2-6FDBA56FBBFE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{63A42B24-3A1B-481F-A5E2-6FDBA56FBBFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A42B24-3A1B-481F-A5E2-6FDBA56FBBFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A42B24-3A1B-481F-A5E2-6FDBA56FBBFE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {276931E7-812B-4F6D-A8F8-962BD0A834D9}
+	EndGlobalSection
+EndGlobal
